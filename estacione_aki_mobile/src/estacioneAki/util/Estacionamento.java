@@ -6,17 +6,87 @@ import org.simpleframework.xml.Root;
 @Root(name="estacionamento")
 public class Estacionamento {
 	@Element
-    public String nome;
+    private String nome;
+	
 	@Element
-    public String endereco;
+    private String endereco;
+	
 	@Element
-    public String cnpj;
+    private String cnpj;
+	
 	@Element
-    public String latitude;
+    private String latitude;
+	
 	@Element
-    public String longitude;
+    private String longitude;
+	
 	@Element
     public String numeroDeVagas;
+	
 	@Element
-    public String precoHora; 
+    private String precoHora; 
+	
+	public String getNome() {
+		return nome;
+	}
+	
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
+	public String getEndereco() {
+		return endereco;
+	}
+	
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+	
+	public String getCnpj() {
+		return cnpj;
+	}
+	
+	public void setCnpj(String cnpj) {
+		this.cnpj = cnpj;
+	}
+	
+	public String getLatitude() {
+		return latitude;
+	}
+	
+	public void setLatitude(String latitude) {
+		this.latitude = latitude;
+	}
+	
+	public String getLongitude() {
+		return longitude;
+	}
+	
+	public void setLongitude(String longitude) {
+		this.longitude = longitude;
+	}
+	
+	public String getNumeroDeVagas() {
+		return numeroDeVagas;
+	}
+	
+	public void setNumeroDeVagas(String numeroDeVagas) {
+		this.numeroDeVagas = numeroDeVagas;
+	}
+	
+	public String getPrecoHora() {
+		return precoHora;
+	}
+	
+	public void setPrecoHora(String precoHora) {
+		this.precoHora = precoHora;
+	}
+	
+	public boolean temVagas(){
+		if(new Integer(numeroDeVagas) >= 1){
+			return true;
+		}else{
+			return false;
+		}
+	}
 }
